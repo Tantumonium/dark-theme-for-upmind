@@ -18,10 +18,17 @@ A custom dark theme for the Upmind client portal interface. This theme provides 
 
 ## Installation
 
+**Option 1: CSS Injection**
+
 1. Install a CSS injection extension for your browser (e.g., Stylus for Chrome/Firefox)
 2. Create a new style for the Upmind client portal domain
 3. Copy and paste the contents of `dark-theme-master.css` into the style editor
 4. Save and enable the style
+
+**Option 2: HTML Import**
+
+1. Include the following line in the `<head>` section of your HTML file: `<link rel="stylesheet" href="dark-theme-master.css">`
+2. Ensure the `dark-theme-master.css` file is accessible at the specified URL
 
 ## Usage
 
@@ -33,10 +40,6 @@ You can customize the theme by modifying the CSS variables in the `:root` sectio
 
 ```css
 :root {
-    /* Brand colors */
-    --brand-color: #0099ff;
-    --brand-color-contrast: #ffffff;
-    
     /* Background colors */
     --dark-background: #111;
     --dark-background-primary: #222;
