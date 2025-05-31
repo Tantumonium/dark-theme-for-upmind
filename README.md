@@ -27,7 +27,7 @@ A custom dark theme for the Upmind client portal interface. This theme provides 
 
 **Option 2: HTML Import**
 
-1. Include the following line in the `<head>` section of your HTML file: `<link rel="stylesheet" href="dark-theme-master.css">`
+1. Include the following line in the `Upmind > Settings > Client area templates > Footer > Template` section of the Upmind Admin interface: `<link rel="stylesheet" href="https://nurbid.com/nurbid-dark-theme-for-upmind.css">`
 2. Ensure the `dark-theme-master.css` file is accessible at the specified URL
 
 ## Usage
