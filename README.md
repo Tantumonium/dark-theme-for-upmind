@@ -1,6 +1,8 @@
-# Dark Theme for Upmind
+# Nurbid Dark Theme for Upmind
 
 A custom dark theme for the Upmind client portal interface. This theme provides a modern, eye-friendly dark mode experience while maintaining the platform's functionality and visual hierarchy.
+
+Created by Dustin Tantum – Nurbid IT Services ([nurbid.com](https://nurbid.com))
 
 ## Features
 
@@ -27,8 +29,8 @@ A custom dark theme for the Upmind client portal interface. This theme provides 
 
 **Option 2: HTML Import**
 
-1. Include the following line in the `Upmind > Settings > Client area templates > Footer > Template` section of the Upmind Admin interface: `<link rel="stylesheet" href="https://nurbid.com/nurbid-dark-theme-for-upmind.css">`
-2. Ensure the `dark-theme-master.css` file is accessible at the specified URL
+1. Include the following line in the `Upmind > Settings > Client area templates > Footer > Template` section of the Upmind Admin interface: `<link rel="stylesheet" href="https://nurbid.com/nurbid-dark-theme-for-upmind.min.css">`
+2. Ensure the `dark-theme-master.min.css` file is accessible at the specified URL
 
 ## Usage
 
