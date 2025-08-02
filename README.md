@@ -29,7 +29,7 @@ Created by Dustin Tantum – Nurbid IT Services ([nurbid.com](https://nurbid.com
 
 **Option 2: HTML Import**
 
-1. Include the following line in the `Upmind > Settings > Client area templates > Footer > Template` section of the Upmind Admin interface: `<link rel="stylesheet" href="https://nurbid.com/nurbid-dark-theme-for-upmind.min.css">`
+1. Include the following line in the `Upmind > Settings > Client area templates > Footer > Template` section of the Upmind Admin interface: `<link rel="stylesheet" href="https://nurbid.com/files/nurbid-dark-theme-for-upmind.min.css">`
 2. Ensure the `dark-theme-master.min.css` file is accessible at the specified URL
 
 ## Usage

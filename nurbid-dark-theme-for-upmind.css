@@ -15,6 +15,7 @@
     --dark-background-tertiary: #444;
     --dark-background-emphasis: #666;
     /* Text colors */
+    --dark-body: #333;
     --dark-body-primary: #999;
     --dark-body-secondary: #ddd;
     --dark-body-tertiary: var(--brand-color-contrast);
@@ -170,6 +171,15 @@ strong, strong.has-text-dark { color: var(--dark-body-secondary)!important; }
 
 .help.is-danger { color: var(--dark-danger); }
 
+.tag.is-warning { color: black!important; }
+
+.select select[disabled], .taginput [disabled].taginput-container.is-focusable, [disabled].textarea, [disabled].input, fieldset[disabled] .select select, .select fieldset[disabled] select, fieldset[disabled] .taginput .taginput-container.is-focusable, .taginput fieldset[disabled] .taginput-container.is-focusable, fieldset[disabled] .textarea, fieldset[disabled] .input {
+   background-color: var(--dark-background-secondary)!important;
+   border-color: var(--dark-border-primary);
+   -webkit-box-shadow: none;
+   box-shadow: none;
+   color: var(--dark-background-emphasis);
+}
 
 /* CORE > Page Background */
 .has-background-light { background-color: var(--dark-background)!important; }
@@ -189,6 +199,9 @@ strong, strong.has-text-dark { color: var(--dark-body-secondary)!important; }
 .button.is-success { background-color: transparent; border-color: var(--dark-success); color: var(--dark-success); }
 .button.is-success:hover, .button.is-success.is-hovered { background-color: var(--dark-success-hover); color: var(--dark-link-hover); }
 .button.is-success[disabled] { background-color: transparent; color: var(--dark-success); }
+.button.is-light:focus, .button.is-light.is-focused { border-color: var(--dark-link); color: var(--dark-link); }
+.button.is-light:focus:not(:active), .button.is-light.is-focused:not(:active) { box-shadow: none; }
+.button.is-light:focus:not(:active):not(.is-loading), .button.is-light.is-focused:not(:active):not(.is-loading) { box-shadow: none; }
 
 /* CARDS > Primary Content Boxes (all pages) */
 .box, .card, .collapse, .u-border-box { background-color: var(--dark-background-primary)!important; color: var(--dark-body-primary)!important; box-shadow: 0 0 0 transparent!important; border: 1px solid var(--dark-border-primary); }
@@ -246,13 +259,15 @@ strong, strong.has-text-dark { color: var(--dark-body-secondary)!important; }
 /* HEADERS > Sub-Section Headers (Dashboard, Products & Services, Single Product/Service Page > Right Sidebar, Billing, My Account, Support) */
 .u-aside header, .stat-header .stat-label-text, .stat-header .dropdown-trigger { background-color: transparent!important; color: var(--dark-body-tertiary); border-bottom: 1px solid var(--dark-border-primary); border-radius: 0!important; }
 /* , .basket-item-totals tbody th, .u-border-box thead th, .u-ripple-table table thead th, .contract-product-details thead th */
-
+.content table td, .content table th { border-color: var(--dark-border-primary); }
 .collapse-header-title, h1.title, .collapse .u-header .u-header-title { color: var(--brand-color)!important; text-transform: capitalize; font-weight: 700; }
-h1.title { text-transform: lowercase; }
+/* h1.title { text-transform: lowercase; } */
 .card-header { display: none; }
 
-
-
+/* MISCELLANEOUS */
+.u-cpcn-action { margin-right: .5rem !important; }
+.u-client-cprod-billboard-content .u-client-cprod-billboard-image[data-v-e3aaafed] .u-square-image { box-shadow: none!important; }
+strong[data-v-4e8e2c7a] { color: var(--dark-body)!important; font-weight: bold; }
 
 /* MENUS */
 .u-menu ul.u-menu-routes li.u-menu-route > a, .custom-menu.custom-menu-light .custom-menu-list a { color: var(--dark-link)!important; border-radius: 8px; }
@@ -276,7 +291,7 @@ h1.title { text-transform: lowercase; }
 .modal-card .modal-card-foot { background-color: var(--dark-background-secondary)!important; box-shadow: var(--dark-shadow-sm); border-top: 2px solid var(--brand-color); }
 
 /* SKELETONS */
-.loading-overlay .loading-background { background-color: #22222200; }
+.loading-overlay .loading-background, .loading-background { background-color: #22222200; }
 .u-grid-item.has-skeletons { background-color: var(--dark-background-primary); border-color: var(--dark-border-primary); }
 .u-grid-item.has-skeletons .u-grid-item-footer { border-top-color: var(--dark-border-primary); }
 .b-skeleton .b-skeleton-item { background: linear-gradient(90deg, var(--dark-border-primary) 0%, var(--dark-background-secondary) 100%); }
@@ -298,7 +313,7 @@ dl dt { color: var(--dark-body-primary)!important; }
 dl dd { color: var(--dark-body-secondary)!important; }
 dl dt, dl dd { padding: 0!important; border: none!important; }
 dl.has-columns dt[data-v-8b189830]:not(:first-child):before { display: none; }
-table thead th, .table-header { color: var(--dark-body-primary)!important; background-color: var(--dark-background-secondary)!important; }
+table thead th, .table-header, table.basket-item-totals tbody th[data-v-9e6a9e0a] { color: var(--dark-body-primary)!important; background-color: var(--dark-background-secondary)!important; }
 table tbody td { color: var(--dark-body-secondary)!important; }
 
 /* TABS (defaults) */
