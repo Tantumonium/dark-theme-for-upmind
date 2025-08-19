@@ -1,8 +1,8 @@
 /* ==========================================================================
     Title:      Nurbid Dark Theme (for Upmind)
     Author:     Dustin Tantum – Nurbid IT Services ( https://nurbid.com )
-    Modified:   2025-06-04
-    Version:    1.0.5
+    Modified:   2025-08-19
+    Version:    1.0.6
     Notes:      This is a dark theme for Upmind. It is a work in progress and will be updated as needed.
                 (INTERNAL: # cleancss -o nurbid-dark-theme-for-upmind.min.css nurbid-dark-theme-for-upmind.css )
    ========================================================================== */
@@ -42,7 +42,7 @@
     /* Shadows */
     --dark-shadow-sm: 0 5px 15px rgba(100, 100, 100, 0.5);
     --dark-shadow-lg: 0 5px 30px rgba(100, 100, 100, 0.5);
-}
+   }
 
 
 
@@ -86,6 +86,12 @@ body { font-family: var(--brand-font-family); background-color: var(--dark-backg
 /* SIGN-IN PAGE */
 #u-client-container > section > div > div > div > div > div > hgroup > p.title.is-2 { color: var(--dark-body-tertiary)!important; }
 
+/* DASHBOARD > Service Grid */
+.u-service-grid[data-v-26d24570] { grid-template-columns: repeat(3, 1fr); }
+.u-service-grid a[data-v-26d24570], .u-service-detail[data-v-26d24570] { background-color: var(--dark-background-primary); border-color: var(--dark-border-primary); color: var(--dark-link); }
+.u-service-grid a[data-v-26d24570]:not(.is-selected):not(.u-more-control):hover { background-color: var(--dark-background-primary); color: var(--dark-link); }
+.u-service-grid a.is-selected[data-v-26d24570] { background-color: var(--dark-background-primary); color: var(--dark-link); }
+
 /* PRODUCTS & SERVICES > Card > P&S List */
 .u-cprod-row-item.u-row-item.is-clickable { border-color: var(--dark-border-primary)!important;}
 /* PRODUCTS & SERVICES > Card > P&S Grid > Product Containers */
@@ -95,6 +101,7 @@ body { font-family: var(--brand-font-family); background-color: var(--dark-backg
 .u-grid-item.is-clickable .u-grid-item-footer .u-grid-item-cta:hover { background-color: var(--dark-background-secondary)!important; }
 /* PRODUCTS & SERVICES > Card > P&S Grid > Product Container > Action Link */
 .u-grid-item.is-clickable .u-grid-item-footer .u-grid-item-cta:hover { color: var(--dark-link-hover); }
+
 /* PRODUCTS & SERVICES > Single Product/Service Page > Top Section */
 .u-client-cprod-layout .u-client-cprod-billboard:before { background-color: var(--dark-background-primary)!important; border-top: none!important; }
 /* PRODUCTS & SERVICES > Single Product/Service Page > Tabs Section */
@@ -130,6 +137,26 @@ body { font-family: var(--brand-font-family); background-color: var(--dark-backg
 .dropdown-trigger .button.is-white { border-width: 0; }
 .u-row-item .u-row-dropdown .dropdown-trigger:hover { color: var(--dark-body-tertiary)!important; }
 
+/* SUPPORT > Single Ticket Page > Top Section */
+.u-client-ticket-layout .u-client-ticket-billboard:before { background-color: var(--dark-background-primary)!important; border-top: none!important; border-bottom-color: var(--dark-border-secondary)!important; }
+.u-client-ticket-layout .u-client-ticket-billboard-details .u-breadcrumbs::before, .u-client-ticket-layout .u-client-ticket-billboard-details .u-link { font-size: .8em!important; }
+.u-client-ticket-layout .u-client-ticket-billboard-details h2 { color: var(--brand-color)!important; font-weight: 700; line-height: 1.2; }
+/* SUPPORT > Single Ticket Page > Message Bar */
+.u-st-wrapper::before { background-color: var(--dark-background)!important; border-color: transparent!important; }
+.u-st-wrapper .u-st-content { background-color: var(--dark-background-primary)!important; box-shadow: var(--dark-shadow-lg); border-width: 0 0.5rem 0 0.5rem!important; border-style: solid!important; border-color: var(--dark-info)!important; border-radius: 6px; line-height: 1.2; margin: 1rem!important; }
+.u-st-wrapper .has-margin-right-auto { color: var(--dark-info)!important; padding-left: 1rem;}
+.u-st-wrapper.is-success .u-st-content { border-color: var(--dark-success)!important; }
+.u-st-wrapper.is-success .has-margin-right-auto { color: var(--dark-success)!important; }
+.u-client-ticket-primary { padding-top: .5rem!important; }
+/* SUPPORT > Single Ticket Page > Floating Column */
+.u-client-ticket-layout .u-client-ticket-secondary.is-hidden-touch { border: none; margin-top: 2px; background-color: var(--dark-background-primary)!important; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)!important; }
+/* SUPPORT > Single Ticket Page > Ticket Input */
+.u-ticket-msg-form .u-ticket-msg-inputs[data-v-e6fb9888], .u-ticket-msg-form .u-ticket-msg-inputs textarea[data-v-e6fb9888] { background-color: var(--dark-background-primary); }
+.u-ticket-msg-form .u-ticket-msg-inputs[data-v-e6fb9888]:hover { border-color: var(--dark-border-tertiary)!important; }
+.u-ticket-msg-form .u-ticket-msg-inputs[data-v-e6fb9888] { border-color: var(--dark-border-primary); }
+/* SUPPORT > Single Ticket Page > Ticket Messages */
+.ticket-message.is-client-message[data-v-bc337a08] { background-color: var(--dark-background-primary); color: var(--dark-body-secondary); border: 1px solid var(--dark-border-primary); }
+
 /* Main Footer */
 footer { background-color: var(--dark-background-primary)!important; padding: 1rem 2rem!important; }
 footer .u-powered-by-link { display: none; }
@@ -141,7 +168,7 @@ footer .u-client-footer-wrapper p { margin-bottom: 0!important; }
    ========================================================================== */
 
 /* CORE > Base Elements (defualt) */
-a, 
+a:not(.is-info), 
 a.has-text-dark { color: var(--dark-link)!important; }
 
 a:hover, 
@@ -197,8 +224,10 @@ strong, strong.has-text-dark { color: var(--dark-body-secondary)!important; }
 .button[disabled], .button.is-white[disabled], .button.is-light[disabled], .button.is-dark[disabled] { background-color: transparent; }
 /* BUTTONS (success) */
 .button.is-success { background-color: transparent; border-color: var(--dark-success); color: var(--dark-success); }
-.button.is-success:hover, .button.is-success.is-hovered { background-color: var(--dark-success-hover); color: var(--dark-link-hover); }
+.button.is-success:hover, .button.is-success.is-hovered { background-color: var(--dark-success-hover); color: var(--dark-link-hover); border-color: var(--dark-success-hover); }
 .button.is-success[disabled] { background-color: transparent; color: var(--dark-success); }
+/* BUTTONS (focus) */
+.button:focus { color: var(--dark-link-active); }
 .button.is-light:focus, .button.is-light.is-focused { border-color: var(--dark-link); color: var(--dark-link); }
 .button.is-light:focus:not(:active), .button.is-light.is-focused:not(:active) { box-shadow: none; }
 .button.is-light:focus:not(:active):not(.is-loading), .button.is-light.is-focused:not(:active):not(.is-loading) { box-shadow: none; }
@@ -260,7 +289,8 @@ strong, strong.has-text-dark { color: var(--dark-body-secondary)!important; }
 .u-aside header, .stat-header .stat-label-text, .stat-header .dropdown-trigger { background-color: transparent!important; color: var(--dark-body-tertiary); border-bottom: 1px solid var(--dark-border-primary); border-radius: 0!important; }
 /* , .basket-item-totals tbody th, .u-border-box thead th, .u-ripple-table table thead th, .contract-product-details thead th */
 .content table td, .content table th { border-color: var(--dark-border-primary); }
-.collapse-header-title, h1.title, .collapse .u-header .u-header-title { color: var(--brand-color)!important; text-transform: capitalize; font-weight: 700; }
+h1.title, .collapse .u-header .u-header-title { color: var(--brand-color)!important; font-weight: 700; }
+.collapse-header-title { color: var(--brand-color)!important; text-transform: none; font-weight: 700; }
 /* h1.title { text-transform: lowercase; } */
 .card-header { display: none; }
 
@@ -404,6 +434,7 @@ ul.u-breadcrumbs li a:hover { color: var(--dark-link-hover)!important; border-bo
 
 /* BUTTONS (full-width) */
 .u-shop-product-controls .button.is-dark.is-fullwidth { width: fit-content!important; }
+.button.is-dark:active, .button.is-dark.is-active { border-color: var(--dark-link); }
 /* .u-basket-continue-shopping[data-v-22b02c82] span { color: var(--dark-body-secondary); } */
 
 /* CATEGORIES MENU > Menu Item (container) */
@@ -439,6 +470,8 @@ ul.u-breadcrumbs li a:hover { color: var(--dark-link-hover)!important; border-bo
 .dac-domain-row .dac-domain-fqdn, .dac-domain-row .dac-domain-price { color: var(--dark-body-tertiary)!important; }
 .column-slot-b .u-item-body { background-color: var(--dark-background-primary); }
 .column-slot-b .u-item-body td { color: var(--dark-body-tertiary)!important; }
+.dac-domain-row.is-exact-match[data-v-a8415602] { background-color: var(--dark-background-tertiary); }
+.dac-domain-cta.button.is-info { background-color: transparent!important; border-color: var(--dark-link); }
 
 /* PRODUCTS > TERM CARDS */
 .product-terms-card-grid a.term-card { color: var(--dark-body-tertiary); }
